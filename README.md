@@ -54,12 +54,13 @@ Exemplo de Uso
 Aqui está um exemplo de como usar a função get_next_line para ler um arquivo:
 
 #include "get_next_line.h"
-#include <fcntl.h> // Para a função open()
-#include <stdio.h> // Para printf()
-
+#include <fcntl.h>
+#include <stdio.h>
 int main(void)
 {
+    
     int fd = open("test.txt", O_RDONLY); // Abre o arquivo em modo de leitura
+    
     char *line;
 
     while ((line = get_next_line(fd)) != NULL)
